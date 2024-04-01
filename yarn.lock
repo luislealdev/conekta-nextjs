@@ -543,7 +543,7 @@ concat-map@0.0.1:
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
   integrity sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==
 
-conekta@^6.0.1:
+conekta@^6.0.2:
   version "6.0.2"
   resolved "https://registry.yarnpkg.com/conekta/-/conekta-6.0.2.tgz#79b45a9e8db983dcca2182280699cd42d40266e9"
   integrity sha512-H2+Aji6Ji5JnMJGH5NMMllFaz9IKEUJuLzrnzybkiJBsF50Y4eeQ7nKzyd6OggcRmqxI66xxGslxMTkUs/dghA==
@@ -2347,6 +2347,11 @@ uri-js@^4.2.2:
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
+
+useform-simple-hook@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/useform-simple-hook/-/useform-simple-hook-1.1.3.tgz#51da312fd9de9a53175f817b23efbefce79ec26e"
+  integrity sha512-g9kDNyo/3ssfTJFHiES6qUOjzs/93VUMV3BurrMgGDgG3DpZYi9sJW9H2RTvM7OfwHt7EHUHdqqbzPUOWaAVhA==
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"
