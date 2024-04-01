@@ -1,38 +1,28 @@
-import { Configuration, CustomersApi, PaymentMethodsApi, TokensApi } from "conekta";
+import { Customer } from "@/interfaces";
+import { Configuration, CustomersApi, OrderRequest, OrdersApi, OrdersApiInterface, PaymentMethodsApi, TokenCard, TokensApi } from "conekta";
 
 const apikey = process.env.CONEKTA_API_KEY;
 const config = new Configuration({ accessToken: apikey });
 
 const conektaCustomersApi = new CustomersApi(config);
 const conektaTokenApi = new TokensApi(config);
-// const conektaPaymentSourceApi = new PaymentMethodsApi(config);
-const conektaOrderApi = new Payment;
-
-
-
-
+const ordersApi = new OrdersApi(config);
 
 // Create a class to export all this methods
 export default class ConektaApi {
-    static async createCustomer(customer: customer) {
+    static async createCustomer(customer: Customer) {
         return conektaCustomersApi.createCustomer(customer);
     }
 
-    static async createToken() {
+    static async createToken(card: TokenCard) {
         return conektaTokenApi.createToken({
-            card: {
-                name: "John Doe",
-                exp_month: "10",
-                exp_year: "2025",
-                number: "4242424242424242",
-                cvc: "123"
-            }
-        }); 
+            card
+        });
     }
 
-    static async createPaymentSource() {
-        return conektaPaymentSourceApi.createCustomerPaymentMethods();
+    static async createOrder(order: OrderRequest) {
+        return ordersApi.createOrder(order);
     }
+
+    // static async 
 }
-
-// export default conektaCustomersApi;

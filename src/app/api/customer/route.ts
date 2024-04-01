@@ -1,7 +1,7 @@
 'use server';
+import ConektaApi from "@/conekta/conektaApi";
 import { Customer, CustomerResponse } from "conekta";
 import { NextRequest, NextResponse } from "next/server"
-import conektaCustomersApi from '../../../conekta/conektaApi';
 
 export async function POST(req: NextRequest, res: NextResponse) {
     try {
@@ -12,7 +12,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
             email,
             phone
         }
-        const resp = await conektaCustomersApi.createCustomer(customer);
+        const resp = await ConektaApi.createCustomer(customer);
 
         const customerResponse = resp.data as CustomerResponse;
         return Response.json(customerResponse);
