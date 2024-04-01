@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Repositorio de Implementación de API para Pagos con Conekta
 
-## Getting Started
+Este repositorio contiene la implementación de una API que se conecta con la plataforma de pagos de Conekta. La implementación se realiza utilizando el API de Next.js 14 y se planea integrar también acciones (actions), dos formas distintas de implementarse.
 
-First, run the development server:
+## Características
+
+- Utiliza Next.js 14 para construir la API, lo que permite un desarrollo rápido y eficiente.
+- Se integra con la API de pagos de Conekta para procesar transacciones de manera segura.
+
+## Estructura del Repositorio
+
+El repositorio se organiza de la siguiente manera:
+
+- **`/app/api`**: Contiene los endpoints de la API para la gestión de pagos y otras funcionalidades relacionadas.
+- **`/app`**: Contiene las páginas de Next.js para manejar las solicitudes HTTP y renderizar las vistas necesarias.
+- **`/actions`**: Mandar llamar a la API de conecta directamente y procesar solicitudes, guardar en base de datos en caso de resultados correctos (NO necesita de llamar a nuestra propia API).
+- **`/interfaces`**: Define las interfaces de objetos que se usarán en toda la aplicación.
+- **`/conekta`**: Crea un objeto donde se configuran las diversas instancias de conekta.
+
+## Instalación y Uso
+
+1. Clona este repositorio en tu máquina local:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://https://github.com/luislealdev/conekta-nextjs.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instala las dependencias (por preferencia personal uso yarn, se puede usar cualquier manejador de paquetes)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cd conekta-nextjs
+yarn
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. Ingresa las variables de entorno en el .env.template y renombra a .env
 
-## Learn More
+4. Corre la aplicación
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+yarn dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5. Accede a la API a través de la URL proporcionada por Next.js, generalmente **http://localhost:3000**

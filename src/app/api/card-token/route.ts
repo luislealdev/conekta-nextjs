@@ -7,7 +7,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
     try {
         const { name, email, phone } = await req.json();
         // console.log(req);
-        const customer: Customer = {
+        const card = {
             name,
             email,
             phone
